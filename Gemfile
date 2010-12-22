@@ -12,6 +12,11 @@ gem 'devise'
 gem 'hpricot'
 gem 'ruby_parser'
 
+# gems only required for development and not app functionality
+group :development, :test do
+  gem 'heroku'
+end
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
