@@ -18,6 +18,7 @@ group :development, :test do
   gem 'heroku'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'shoulda'
   gem 'cucumber'
   gem 'capybara'
   gem 'ruby-debug19'
