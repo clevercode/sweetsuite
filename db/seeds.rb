@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+#
+
+if Rails.env.development? && !Admin.count.zero?
+  Admin.create!(:name => 'Candy Man', :email => 'contact@clevercode.net', :password => 'password', :password_confirmation => 'password')
+end

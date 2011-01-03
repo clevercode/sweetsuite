@@ -1,27 +1,39 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+gem 'rails', '~> 3.0.3'
+
 gem 'compass'
-gem 'html5-boilerplate'
-gem 'haml'
-# Generates Haml views instead of .erb
-gem 'haml-rails'
-gem 'jquery-rails'
-gem 'formtastic'
 gem 'devise'
-gem 'hpricot'
-gem 'ruby_parser'
+gem 'formtastic'
+gem 'haml-rails'
+gem 'html5-boilerplate'
+gem 'jquery-rails'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 
 # gems only required for development and not app functionality
-group :development, :test do
+group :development do
   gem 'heroku'
+end
+
+group :development, :test do
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'shoulda'
-  gem 'cucumber'
+end
+
+group :test do
+  gem 'autotest-fsevent'
+  gem 'autotest-growl'
+  gem 'autotest-rails'
   gem 'capybara'
+  gem 'cucumber'
+  gem 'factory_girl_rails'
+  gem 'fuubar'
+  gem 'heroku'
+  gem 'launchy'
+  gem 'rspec-rails'
   gem 'ruby-debug19'
+  gem 'shoulda'
+  gem 'ZenTest'
 end
 
 
