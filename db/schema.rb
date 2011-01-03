@@ -10,7 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101224042554) do
+ActiveRecord::Schema.define(:version => 20110103025216) do
+
+  create_table "access_grants", :force => true do |t|
+    t.string   "code"
+    t.string   "access_token"
+    t.string   "refresh_token"
+    t.datetime "expires_at"
+    t.integer  "user_id"
+    t.integer  "application_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "accounts", :force => true do |t|
     t.datetime "created_at"
@@ -34,9 +45,10 @@ ActiveRecord::Schema.define(:version => 20101224042554) do
     t.string   "name"
     t.string   "slug"
     t.string   "callback_url"
-    t.string   "api_key"
+    t.string   "client_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "client_secret"
   end
 
   create_table "histories", :force => true do |t|
