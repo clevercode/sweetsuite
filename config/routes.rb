@@ -1,4 +1,4 @@
-SweetsuiteAuth::Application.routes.draw do
+SweetSuite::Authentication::Application.routes.draw do
   
   devise_for :admins do
     root :to => redirect('/admin')
