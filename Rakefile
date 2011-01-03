@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-SweetsuiteAuth::Application.load_tasks
+SweetSuite::Authentication::Application.load_tasks
