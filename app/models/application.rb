@@ -1,7 +1,7 @@
 class Application < ActiveRecord::Base
 
-  has_many :access_tokens
-  has_many :users, :through => :access_tokens
+  has_many :access_grants
+  has_many :users, :through => :access_grants
 
   attr_accessible :name, :slug, :callback_url 
 
