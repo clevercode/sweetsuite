@@ -1,0 +1,14 @@
+= semantic_form_for profile, :url => profile_path do |f|
+  -if profile.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(profile.errors.count, "error")} prohibited this message from being saved:"
+      %ul
+        - profile.errors.full_messages.each do |msg|
+          %li= msg
+  - f.inputs do
+    = f.input :email
+    = f.input :password
+    = f.input :password_confirmation
+
+  - f.buttons do
+    = f.commit_button
