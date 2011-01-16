@@ -1,8 +1,14 @@
 SweetSuite::Authentication::Application.routes.draw do
 
-  root :to => "devise/sessions#sign_in"
+  root :to => "profiles#show"
 
   devise_for :users
+  
+  resources :users do
+    root :to => "profiles#show"
+  end
+  
+  resource :profile
   
   devise_for :admins do
     root :to => redirect('/admin')
@@ -10,7 +16,7 @@ SweetSuite::Authentication::Application.routes.draw do
 
   controller 'oauth', :path => 'oauth' do
     get 'authorize', :action => 'authorize'
-    get 'access_token', :action => 'access_token'
+    post 'access_token', :action => 'access_token'
     get 'user', :action => 'user'
   end
 
