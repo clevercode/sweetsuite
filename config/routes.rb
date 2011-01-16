@@ -16,7 +16,7 @@ SweetSuite::Authentication::Application.routes.draw do
 
   controller 'oauth', :path => 'oauth' do
     get 'authorize', :action => 'authorize'
-    get 'access_token', :action => 'access_token'
+    post 'access_token', :action => 'access_token'
     get 'user', :action => 'user'
   end
 
