@@ -18,22 +18,22 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'ruby-debug19'
 end
 
 group :test do
-  gem 'autotest-fsevent'
-  gem 'autotest-growl'
-  gem 'autotest-rails'
+  if RUBY_PLATFORM =~ /darwin/
+    gem 'autotest-fsevent'
+    gem 'autotest-growl'
+    gem 'autotest-rails'
+    gem 'ZenTest'
+  end
   gem 'capybara'
   gem 'cucumber'
   gem 'factory_girl_rails'
   gem 'fuubar'
-  gem 'heroku'
   gem 'launchy'
-  gem 'rspec-rails'
-  gem 'ruby-debug19'
   gem 'shoulda'
-  gem 'ZenTest'
 end
 
 
