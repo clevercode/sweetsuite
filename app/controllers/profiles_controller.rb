@@ -1,8 +1,10 @@
 class ProfilesController < ApplicationController
   before_filter :authenticate_user!
+
+  respond_to :html, :json, :only => :show
   
   def show
-    render
+    respond_with(profile, :status => :ok)
   end
   
   def update
