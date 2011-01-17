@@ -1,0 +1,6 @@
+%ul
+  - Application.all.each do |app|
+    %li= link_to app.name, app.url
+- if current_user
+  #account
+    %p Hi #{current_user.first_name}, love the hair.

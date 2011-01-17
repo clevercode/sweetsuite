@@ -4,6 +4,7 @@
   = render :partial => 'layouts/head'
   %body{ :class => "#{controller.controller_name}" }
     #container
+      = render :partial => 'layouts/candybar'
       %header#header
         = render :partial => 'layouts/header'
       #main
