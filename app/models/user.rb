@@ -19,5 +19,20 @@ class User < ActiveRecord::Base
   has_many :access_grants
 
 
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email,
+                  :password,
+                  :password_confirmation,
+                  :remember_me,
+                  :first_name,
+                  :last_name
+
+
+  protected
+
+  # allows user to change profile without providing a password (but checks if
+  # new account does require a password, or if any password field is filled
+  # in)
+  def password_required?
+    !persisted? || password.present? || password_confirmation.present?
+  end
 end

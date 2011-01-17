@@ -7,8 +7,8 @@ describe Application do
   end
 
   context 'associations' do
-    it { should have_many(:access_tokens) }
-    it { should have_many(:users).through(:access_tokens) }
+    it { should have_many(:access_grants) }
+    it { should have_many(:users).through(:access_grants) }
   end
 
   context 'mass assignment' do 
