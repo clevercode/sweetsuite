@@ -1,0 +1,12 @@
+- title = 'Add Application'
+
+- content_for :sub_header do 
+  %h1= title
+
+- content_for :sidebar do
+  %ul#actions_list_view
+    %li
+      = link_to 'Back to List', confectionery_applications_path
+
+.single_detail_view
+  = render @application

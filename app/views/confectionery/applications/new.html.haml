@@ -1,0 +1,14 @@
+- title = 'Add Application'
+
+- content_for :sub_header do 
+  %h1= title
+
+- content_for :sidebar do
+  %ul#actions_list_view
+    %li
+      = link_to 'Back to List', confectionery_applications_path
+
+.form_detail_view
+  = semantic_form_for([:confectionery, @application]) do |f|
+    = f.inputs :name
+    = f.buttons

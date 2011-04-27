@@ -3,15 +3,18 @@
   %head
     %meta(charset='utf-8')
     %title= formatted_title
-    = stylesheet_link_tag 'compiled/screen'
+    = stylesheet_link_tag 'formtastic', 'compiled/screen', 'compiled/confectionery'
     = javascript_include_tag :defaults
   %body{ :class => "#{controller.controller_name}" }
     #omnibar
       .brand SweetSuite
+      .sub Confectionery
       - if current_user
         .currentUser
-          = #current_user.name
+          = # current_user.name
           = "(#{current_user.email})"
     #application
+      %header.sub= yield(:sub_header)
+      .sidebar= yield(:sidebar)
       = yield
     #info

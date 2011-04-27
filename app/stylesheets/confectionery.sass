@@ -1,0 +1,110 @@
+@import compass/css3/text-shadow
+@import compass/css3/box-shadow
+
+header.sub
+  padding: 10px 20px 10px
+  float: left
+  h1
+    font-size: 18px
+    font-weight: bold
+
+$link-color: transparentize(mix(#027901, #039f01),0.1)
+a
+  color: $link-color
+  text-decoration: none
+
+  &:visited
+    color: darken($link-color, 10%)
+
+  &:hover
+    text-decoration: underline
+
+::selection
+  background-color: #70ac70
+
+.sidebar
+  font-size: 14px
+  clear: left
+  float: left
+  margin-left: 15px
+
+  li
+    display: block
+    width: 200px
+    margin-bottom: 2px
+
+    a, span
+      display: block
+      padding: 5px 15px
+      width: auto
+
+    a:hover
+      color: white
+      +single-text-shadow(transparentize(black, 0.5), 0px, -1px, 1px)
+      +box-shadow(transparentize(black, 0.7), 1px, 1px, 3px)
+      background-color: $link-color
+      text-decoration: none
+
+  
+.detail_view
+  padding: 10px 20px
+  background: transparentize(white, 0.5)
+  margin: 20px 0px 20px 225px
+  min-height: 400px
+  border: 1px solid transparentize(black, 0.85)
+  border-bottom: 1px solid transparentize(white, 0.45)
+
+.empty_detail_view
+  @extend .detail_view
+  text-align: center
+  span
+    line-height: 400px
+    color: #555
+    font-size: 14px
+    font-style: italic
+
+.form_detail_view
+  @extend .detail_view
+  .formtastic
+    li
+      padding-top: 10px !important
+    label
+      font-size: 14px
+    input 
+      font-size: 14px
+      padding: 3px 5px
+    
+.single_detail_view
+  @extend .detail_view
+
+.collection_detail_view
+  @extend .detail_view
+
+  article
+    padding-bottom: 10px
+    margin-bottom: 10px
+    border-bottom: 1px solid #AAA
+
+.attribute
+  font-size: 14px
+  padding: 0.5em 0
+  overflow: hidden
+  .label
+    width: 20%
+    min-width: 100px
+    color: #444
+    float: left
+    font-weight: bold
+  .value
+    float: left
+    width: 72%
+
+.attribute.name
+  .value
+    font-weight: bold
+.attribute.client_id,
+.attribute.client_secret
+  .value
+    font-family: Menlo, monospace
+
+

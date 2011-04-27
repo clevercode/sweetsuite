@@ -3,3 +3,10 @@
 
 en:
   hello: "Hello world"
+
+  activerecord:
+    attributes:
+      application:
+        url: URL
+        client_id: Client ID
+        client_secret: Client Secret

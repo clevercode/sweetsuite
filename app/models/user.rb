@@ -26,6 +26,13 @@ class User < ActiveRecord::Base
                   :first_name,
                   :last_name
 
+  def as_json(options=nil)
+    super(options.merge(:only => [:id, :email, :first_name, :last_name]))
+  end
+
+  def name
+    "#{first_name} #{last_name}"
+  end
 
   protected
 

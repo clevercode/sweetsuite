@@ -1,0 +1,19 @@
+- title = 'Applications'
+
+- content_for :sub_header do 
+  %h1= title
+
+- content_for :sidebar do
+  %ul#actions_list_view
+    /%li= link_to 'List', confectionery_applications_path
+    %li
+      = link_to 'Add Application', new_confectionery_application_path
+    %li 
+      %span List
+
+- if @applications.any?
+  .collection_detail_view
+    = render @applications
+- else
+  .empty_detail_view
+    %span There are no applications.

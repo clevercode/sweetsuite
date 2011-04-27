@@ -1,0 +1,5 @@
+%article[application]
+  - [:name, :url, :client_id, :client_secret].each do |attribute|
+    .attribute{class: attribute} 
+      .label= Application.human_attribute_name(attribute)
+      .value= application.send(attribute)

@@ -1,0 +1,80 @@
+@import compass/reset
+@import compass/css3/images
+@import compass/css3/border-radius
+@import compass/css3/text-shadow
+
+html
+  height: 100%
+
+body
+  height: 100%
+  font: 12px/18px 'Helvetica Neue', sans-serif
+  //+background-image(linear-gradient(#cfe7fa, #6393c1))
+  +background-image(linear-gradient(#dfdfdf, #e3e3e3))
+
+.brand
+  //font-family: 'Cabin'
+  font-weight: bold
+
+$link-color: transparentize(mix(#027901, #039f01),0.1)
+a
+  color: $link-color
+  text-decoration: none
+
+  &:visited
+    color: darken($link-color, 10%)
+
+  &:hover
+    text-decoration: underline
+
+#omnibar
+  width: auto
+  +background(linear-gradient(transparentize(#027901, 0.5), transparentize(#039f01, 0.3)))
+  border-bottom: 1px solid transparentize(#000, 0.6)
+  +single-text-shadow(transparentize(white, 0.3), 0px, 1px, 1px)
+  -webkit-font-smoothing: antialiased
+
+  .brand
+    display: inline-block
+    font-size: 14px
+    padding: 5px 10px
+
+  .sub
+    font-size: 13px
+    margin-top: -5px
+    line-height: 90%
+    text-transform: lowercase
+    font-variant: small-caps
+    padding: 0px 10px 5px
+
+  .currentUser
+    display: inline-block
+    float: right
+    padding: 5px 10px
+    font-size: 11px
+
+
+// Login Page
+.sessions
+  #application
+    padding: 10px 20px
+    background: transparentize(white, 0.5)
+    border: 1px solid transparentize(black, 0.85)
+    width: 300px
+    margin: 40px auto
+
+    h2
+      font-size: 18px
+      line-height: 2
+    p
+      margin-bottom: 10px
+
+    label
+      color: #333
+      font-size: 14px
+
+    input[type=email],
+    input[type=password]
+      font-size: 14px
+      padding: 3px 5px
+      width: 20em

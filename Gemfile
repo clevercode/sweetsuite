@@ -2,14 +2,13 @@ source 'http://rubygems.org'
 
 gem 'rails', '~> 3.0.3'
 
-gem 'compass'
+gem 'compass', '~> 0.11.1'
 gem 'devise'
 gem 'formtastic'
+gem 'haml', '~> 3.1'
+gem 'sass', '~> 3.1'
 gem 'haml-rails'
-gem 'html5-boilerplate'
 gem 'jquery-rails'
-gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
-
 
 # gems only required for development and not app functionality
 group :development do
@@ -37,7 +36,7 @@ group :test do
 end
 
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'mysql2'
 
 # Rack server
 gem 'thin'
