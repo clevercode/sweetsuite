@@ -16,6 +16,7 @@ class Application < ActiveRecord::Base
   def make_inferences
     self.slug = self.name.parameterize
     self.url = 'http://%s.sweetsuite.dev' % self.slug
+    self.callback_url = '%s/auth/sweetsuite/callback' % self.url
   end
 
   def generate_client_id!
