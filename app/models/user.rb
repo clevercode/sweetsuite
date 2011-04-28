@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
          :rememberable, :validatable,
          :trackable
 
-  self.token_authentication_key = 'access_token'
+  self.token_authentication_key = 'oauth_token'
 
   def self.find_for_token_authentication(conditions)
     AccessGrant.where(:access_token => conditions[token_authentication_key]).includes(:user).first.try(:user)
