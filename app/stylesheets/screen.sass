@@ -2,6 +2,7 @@
 @import compass/css3/images
 @import compass/css3/border-radius
 @import compass/css3/text-shadow
+@import jellybean
 
 html
   height: 100%
@@ -28,31 +29,7 @@ a
     text-decoration: underline
 
 #omnibar
-  width: auto
-  +background(linear-gradient(transparentize(#027901, 0.5), transparentize(#039f01, 0.3)))
-  border-bottom: 1px solid transparentize(#000, 0.6)
-  +single-text-shadow(transparentize(white, 0.3), 0px, 1px, 1px)
-  -webkit-font-smoothing: antialiased
-
-  .brand
-    display: inline-block
-    font-size: 14px
-    padding: 5px 10px
-
-  .sub
-    font-size: 13px
-    margin-top: -5px
-    line-height: 90%
-    text-transform: lowercase
-    font-variant: small-caps
-    padding: 0px 10px 5px
-
-  .currentUser
-    display: inline-block
-    float: right
-    padding: 5px 10px
-    font-size: 11px
-
+  +jb_omnibar(#027901, #039f01)
 
 // Login Page
 .sessions
