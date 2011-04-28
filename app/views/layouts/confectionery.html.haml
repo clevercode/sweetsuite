@@ -11,7 +11,7 @@
       .sub Confectionery
       - if current_user
         .currentUser
-          = # current_user.name
+          = current_user.name
           = "(#{current_user.email})"
     #application
       %header.sub= yield(:sub_header)

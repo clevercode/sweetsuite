@@ -10,7 +10,7 @@
       .brand SweetSuite
       - if current_user
         .currentUser
-          = #current_user.name
+          = current_user.name
           = "(#{current_user.email})"
     #application
       = yield

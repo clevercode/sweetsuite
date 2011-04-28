@@ -1,0 +1,10 @@
+%article[user]
+  - [:name, :email].each do |attribute|
+    .attribute{class: attribute} 
+      .label= User.human_attribute_name(attribute)
+      .value= user.send(attribute)
+  %h2 Access Grants
+  %ul.access_grants
+    - user.access_grants.each do |access_grant|
+      = access_grant.application.name
+      = access_grant.access_token

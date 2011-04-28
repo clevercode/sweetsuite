@@ -1,0 +1,16 @@
+- title = 'Users'
+
+- content_for :sub_header do 
+  %h1= title
+
+- content_for :sidebar do
+  %ul#actions_list_view
+    %li
+      = link_to 'Add User', new_confectionery_user_path
+
+- if @users.any?
+  .collection_detail_view
+    = render @users
+- else
+  .empty_detail_view
+    %span There are no users.
