@@ -37,6 +37,13 @@ GIT
       oa-openid (= 0.2.4)
 
 PATH
+  remote: ./../jellybean
+  specs:
+    jellybean (0.0.1)
+      barista
+      compass (~> 0.11.0)
+
+PATH
   remote: ./../sweetsuite-gem
   specs:
     sweetsuite (0.0.1)
@@ -84,6 +91,8 @@ GEM
     autotest-growl (0.2.9)
     autotest-rails (4.1.0)
       ZenTest
+    barista (1.0.0)
+      coffee-script (~> 2.1.1)
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
     capybara (0.4.1.2)
@@ -100,6 +109,9 @@ GEM
     childprocess (0.1.8)
       ffi (~> 1.0.6)
     chunky_png (1.1.1)
+    coffee-script (2.1.3)
+      coffee-script-source
+    coffee-script-source (1.0.1)
     columnize (0.3.2)
     compass (0.11.1)
       chunky_png (~> 1.1)
@@ -276,6 +288,7 @@ DEPENDENCIES
   haml (~> 3.1)
   haml-rails
   heroku
+  jellybean!
   jquery-rails
   launchy
   mysql2
